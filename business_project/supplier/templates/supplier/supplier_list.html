@@ -1,0 +1,24 @@
+<<!-- supplier/templates/supplier/supplier_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supplier List</title>
+</head>
+<body>
+    <h1>Supplier List</h1>
+    <ul>
+        {% for supplier in suppliers %}
+            <li>
+                <strong>Name:</strong> {{ supplier.name }}<br>
+                <strong>Address:</strong> {{ supplier.address }}<br>
+                <strong>Phone:</strong> {{ supplier.phone }}<br>
+                <strong>Email:</strong> {{ supplier.email }}<br>
+                <strong>Other Details:</strong> {{ supplier.other_details }}<br>
+            </li>
+        {% empty %}
+            <li>No suppliers found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
